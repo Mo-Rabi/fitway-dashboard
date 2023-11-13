@@ -1,0 +1,24 @@
+
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.email}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteUser(user._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+  <caption class="caption-top font-weight-bold text-uppercase" style="font-size: 1.5rem;">Total Trainees: {{ Users.length }}</caption>
+</table>
